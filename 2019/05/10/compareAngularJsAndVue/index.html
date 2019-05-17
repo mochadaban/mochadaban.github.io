@@ -96,21 +96,18 @@
 
 
 
-  <meta name="description" content="获取当前时间并实时更新js代码：1234567891011121314151617181920212223&amp;lt;script&amp;gt;    var hour = document.getElementById(&quot;hour&quot;);    var minute = document.getElementById(&quot;minute&quot;);    var second = document.getElemen">
-<meta name="keywords" content="js 定时器">
+  <meta name="description" content="刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部">
+<meta name="keywords" content="angularJs Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="之前做的 一个简单的clock">
-<meta property="og:url" content="http://yoursite.com/2019/05/17/clocks/index.html">
+<meta property="og:title" content="初学Vue，比较angularJs和Vue">
+<meta property="og:url" content="http://yoursite.com/2019/05/10/compareAngularJsAndVue/index.html">
 <meta property="og:site_name" content="mochadaban">
-<meta property="og:description" content="获取当前时间并实时更新js代码：1234567891011121314151617181920212223&amp;lt;script&amp;gt;    var hour = document.getElementById(&quot;hour&quot;);    var minute = document.getElementById(&quot;minute&quot;);    var second = document.getElemen">
+<meta property="og:description" content="刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/clock.jpg">
-<meta property="og:image" content="http://yoursite.com/images/clock1.gif">
-<meta property="og:updated_time" content="2019-05-16T17:11:03.027Z">
+<meta property="og:updated_time" content="2019-05-17T15:50:06.355Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="之前做的 一个简单的clock">
-<meta name="twitter:description" content="获取当前时间并实时更新js代码：1234567891011121314151617181920212223&amp;lt;script&amp;gt;    var hour = document.getElementById(&quot;hour&quot;);    var minute = document.getElementById(&quot;minute&quot;);    var second = document.getElemen">
-<meta name="twitter:image" content="http://yoursite.com/images/clock.jpg">
+<meta name="twitter:title" content="初学Vue，比较angularJs和Vue">
+<meta name="twitter:description" content="刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部">
 
 
 
@@ -118,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/05/17/clocks/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/10/compareAngularJsAndVue/">
 
 
 
@@ -128,7 +125,7 @@
   };
 </script>
 
-  <title>之前做的 一个简单的clock | mochadaban</title>
+  <title>初学Vue，比较angularJs和Vue | mochadaban</title>
   
 
 
@@ -331,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/17/clocks/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/10/compareAngularJsAndVue/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mochadaban">
@@ -348,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">之前做的 一个简单的clock
+          <h1 class="post-title" itemprop="name headline">初学Vue，比较angularJs和Vue
 
               
             
@@ -374,7 +371,7 @@
                 
               
 
-              <time title="创建时间：2019-05-17 00:15:28" itemprop="dateCreated datePublished" datetime="2019-05-17T00:15:28+08:00">2019-05-17</time>
+              <time title="创建时间：2019-05-10 10:18:51" itemprop="dateCreated datePublished" datetime="2019-05-10T10:18:51+08:00">2019-05-10</time>
             
 
             
@@ -409,9 +406,8 @@
       
 
       
-        <p>获取当前时间并实时更新<br>js代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">var</span> hour = <span class="built_in">document</span>.getElementById(<span class="string">"hour"</span>);</span><br><span class="line">    <span class="keyword">var</span> minute = <span class="built_in">document</span>.getElementById(<span class="string">"minute"</span>);</span><br><span class="line">    <span class="keyword">var</span> second = <span class="built_in">document</span>.getElementById(<span class="string">"second"</span>);</span><br><span class="line">    <span class="comment">// 开始</span></span><br><span class="line">    <span class="keyword">var</span> s = <span class="number">0</span>,m = <span class="number">0</span>, h = <span class="number">0</span>, ms = <span class="number">0</span>;</span><br><span class="line">    setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();  </span><br><span class="line">        ms = date.getMilliseconds();        <span class="comment">//毫秒数</span></span><br><span class="line">        s = date.getSeconds() + ms / <span class="number">1000</span>;  <span class="comment">//秒</span></span><br><span class="line">        m = date.getMinutes() + s / <span class="number">60</span>;     <span class="comment">//准确的分钟数</span></span><br><span class="line">        h = date.getHours() % <span class="number">12</span> + m / <span class="number">60</span> ; <span class="comment">//小时</span></span><br><span class="line">        <span class="comment">//旋转角度</span></span><br><span class="line">        <span class="comment">//时针每小时旋转360/12 = 30°   </span></span><br><span class="line">        <span class="comment">//秒针和分针 每秒，每分钟旋转360/60 = 6°</span></span><br><span class="line">        second.style.WebkitTransform = <span class="string">"rotate("</span>+ s*<span class="number">6</span> +<span class="string">"deg)"</span>;</span><br><span class="line">        minute.style.WebkitTransform = <span class="string">"rotate("</span>+ m*<span class="number">6</span> +<span class="string">"deg)"</span>;</span><br><span class="line">        hour.style.WebkitTransform = <span class="string">"rotate("</span>+ h*<span class="number">30</span> +<span class="string">"deg)"</span>;</span><br><span class="line">        second.style.MozTransform = <span class="string">"rotate("</span>+ s*<span class="number">6</span> +<span class="string">"deg)"</span>;</span><br><span class="line">        minute.style.MozTransform = <span class="string">"rotate("</span>+ m*<span class="number">6</span> +<span class="string">"deg)"</span>;</span><br><span class="line">        hour.style.MozTransform = <span class="string">"rotate("</span>+ h*<span class="number">30</span> +<span class="string">"deg)"</span>;</span><br><span class="line">    &#125;,<span class="number">100</span>);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>效果如下:<br><img src="/images/clock.jpg" alt="clock"><br>动态效果:<br><img src="/images/clock1.gif" alt="clock"></p>
-
+        <p>刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。<br>   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部可以有自己的视图和数据逻辑。但在angularjs中感觉组件就是指令。vue不使用脏值检查，性能也更好一些。</p>
+<h2 id="持续更新，后面可能会贴一些代码上来比较语法"><a href="#持续更新，后面可能会贴一些代码上来比较语法" class="headerlink" title="   持续更新，后面可能会贴一些代码上来比较语法"></a>   持续更新，后面可能会贴一些代码上来比较语法</h2>
       
     </div>
 
@@ -434,7 +430,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/js-定时器/" rel="tag"># js 定时器</a>
+            <a href="/tags/angularJs-Vue/" rel="tag"># angularJs Vue</a>
           
         </div>
       
@@ -447,8 +443,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/15/hello-world/" rel="next" title="mochadaban是什么">
-                <i class="fa fa-chevron-left"></i> mochadaban是什么
+              <a href="/2019/05/09/triangle/" rel="next" title="CSS实现小三角">
+                <i class="fa fa-chevron-left"></i> CSS实现小三角
               </a>
             
           </div>
@@ -456,6 +452,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/15/hello-world/" rel="prev" title="mochadaban是什么">
+                mochadaban是什么 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -499,8 +499,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -578,6 +587,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#持续更新，后面可能会贴一些代码上来比较语法"><span class="nav-number">1.</span> <span class="nav-text">   持续更新，后面可能会贴一些代码上来比较语法</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
