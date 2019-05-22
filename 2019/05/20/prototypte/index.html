@@ -96,18 +96,23 @@
 
 
 
-  <meta name="description" content="刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部">
-<meta name="keywords" content="angularJs Vue">
+  <meta name="description" content="&amp;#8194;&amp;#8194;很多人对原型和原型链的理解都很模糊，我也是…于是乎，参考了很多资料去理解这个东西 一、prototype的引入 先了解下原型，构造函数中的属性与方法在生成实例对象之后，是无法共享的。示例：12345678　　function Person(name)&amp;#123;　　　　this.name = name;　　　　this.category = &amp;apos;human&amp;ap">
+<meta name="keywords" content="原型 原型链 js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初学Vue，比较angularJs和Vue">
-<meta property="og:url" content="http://yoursite.com/2019/05/10/compareAngularJsAndVue/index.html">
+<meta property="og:title" content="原型和原型链">
+<meta property="og:url" content="http://yoursite.com/2019/05/20/prototypte/index.html">
 <meta property="og:site_name" content="mochadaban">
-<meta property="og:description" content="刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部">
+<meta property="og:description" content="&amp;#8194;&amp;#8194;很多人对原型和原型链的理解都很模糊，我也是…于是乎，参考了很多资料去理解这个东西 一、prototype的引入 先了解下原型，构造函数中的属性与方法在生成实例对象之后，是无法共享的。示例：12345678　　function Person(name)&amp;#123;　　　　this.name = name;　　　　this.category = &amp;apos;human&amp;ap">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-17T15:50:06.355Z">
+<meta property="og:image" content="http://yoursite.com/images/blogUsed/proto_.jpg">
+<meta property="og:image" content="http://yoursite.com/images/blogUsed/constructor.jpg">
+<meta property="og:image" content="http://yoursite.com/images/blogUsed/relation.jpg">
+<meta property="og:image" content="http://yoursite.com/images/blogUsed/yuanxinglain.jpg">
+<meta property="og:updated_time" content="2019-05-22T12:29:09.196Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初学Vue，比较angularJs和Vue">
-<meta name="twitter:description" content="刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部">
+<meta name="twitter:title" content="原型和原型链">
+<meta name="twitter:description" content="&amp;#8194;&amp;#8194;很多人对原型和原型链的理解都很模糊，我也是…于是乎，参考了很多资料去理解这个东西 一、prototype的引入 先了解下原型，构造函数中的属性与方法在生成实例对象之后，是无法共享的。示例：12345678　　function Person(name)&amp;#123;　　　　this.name = name;　　　　this.category = &amp;apos;human&amp;ap">
+<meta name="twitter:image" content="http://yoursite.com/images/blogUsed/proto_.jpg">
 
 
 
@@ -115,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/05/10/compareAngularJsAndVue/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/20/prototypte/">
 
 
 
@@ -125,7 +130,7 @@
   };
 </script>
 
-  <title>初学Vue，比较angularJs和Vue | mochadaban</title>
+  <title>原型和原型链 | mochadaban</title>
   
 
 
@@ -328,7 +333,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/10/compareAngularJsAndVue/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/20/prototypte/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mochadaban">
@@ -345,7 +350,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">初学Vue，比较angularJs和Vue
+          <h1 class="post-title" itemprop="name headline">原型和原型链
 
               
             
@@ -371,12 +376,30 @@
                 
               
 
-              <time title="创建时间：2019-05-10 10:18:51" itemprop="dateCreated datePublished" datetime="2019-05-10T10:18:51+08:00">2019-05-10</time>
+              <time title="创建时间：2019-05-20 13:45:23" itemprop="dateCreated datePublished" datetime="2019-05-20T13:45:23+08:00">2019-05-20</time>
             
 
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -406,8 +429,17 @@
       
 
       
-        <p>刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。<br>   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部可以有自己的视图和数据逻辑。但在angularjs中感觉组件就是指令。vue不使用脏值检查，性能也更好一些。</p>
-<h2 id="持续更新，后面可能会贴一些代码上来比较语法"><a href="#持续更新，后面可能会贴一些代码上来比较语法" class="headerlink" title="   持续更新，后面可能会贴一些代码上来比较语法"></a>   持续更新，后面可能会贴一些代码上来比较语法</h2>
+        <p><strong>&#8194;&#8194;很多人对原型和原型链的理解都很模糊，我也是…于是乎，参考了很多资料去理解这个东西</strong></p>
+<p><strong>一、prototype的引入</strong></p>
+<p>先了解下原型，构造函数中的属性与方法在生成实例对象之后，是无法共享的。<br>示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">　　function Person(name)&#123;</span><br><span class="line">　　　　this.name = name;</span><br><span class="line">　　　　this.category = &apos;human&apos;;</span><br><span class="line">　　&#125;</span><br><span class="line">　　var A = new Person(&apos;毛毛&apos;);</span><br><span class="line">　　var B = new Person(&apos;豆豆&apos;);</span><br><span class="line">　　A.category = &quot;aaa&quot;;</span><br><span class="line">　　console.log(B.category);//仍然是human</span><br></pre></td></tr></table></figure></p>
+<p>&#8194;&#8194;根据这个例子看出，A和B两个category属性独立，不会互相影响，就意味着每新增一个实例对象，都有属于自己的属性和方法的副本。这不仅无法做到数据共享，也是极大的资源浪费。<br>基于这一点，设计者为构造函数设置了<strong>prototype</strong>属性。这个属性包含一个对象，所有实例对象共享的属性和方法，都放在这个对象里面；那些不需要共享的属性和方法，就放在构造函数里面。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">　　function Person(name)&#123;</span><br><span class="line">　　　　this.name = name;</span><br><span class="line">　　&#125;</span><br><span class="line">　　Person.prototype.category=&apos;human&apos;;</span><br><span class="line">　　var A = new Person(&apos;毛毛&apos;);</span><br><span class="line">　　var B = new Person(&apos;豆豆&apos;);</span><br><span class="line">　　console.log(A.category);//human</span><br><span class="line">　　console.log(B.category);//human</span><br></pre></td></tr></table></figure></p>
+<p>此时，category属性是两个实例共享的，如果修改了prototype对象，就会同时影响到两个实例对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">　　Person.prototype.category=&apos;cat&apos;;</span><br><span class="line">　　console.log(A.category);//cat</span><br><span class="line">　　console.log(B.category);//cat</span><br></pre></td></tr></table></figure></p>
+<p><strong>二、__proto__和constructor</strong><br>&#8194;&#8194;了解原型链之前，先来看下 <strong>__proto__ 和 constructor</strong><br>&#8194;&#8194;<strong>__proto__</strong>是隐式原型，每个对象都有这样的隐藏属性，<strong>它引用了构造函数的prototype。</strong><br><img src="/images/blogUsed/proto_.jpg" alt="proto"><br>按照标准，__proto__是不对外公开的，是个私有属性，(Firefox、Safari 和 Chrome 的每个对象上都有这个属性 ，其他浏览器中是不可见的）<br>&#8194;&#8194;<strong>constructor</strong>属性存在于原型对象中，始终指向创建自身的构造函数，也可以说constructor的定义是要指向原型属性对应的构造函数的，Person.prototype.constructor 指回了 Person。</p>
+<p><img src="/images/blogUsed/constructor.jpg" alt="constructor"><br>结合以上关系可见:<br><img src="/images/blogUsed/relation.jpg" alt="关系"><br><strong>三、原型链</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function A()&#123;&#125;</span><br><span class="line">A.prototype=&#123;&apos;name&apos;:&#123;&apos;a&apos;:1&#125;&#125;;</span><br><span class="line">a=new A();</span><br><span class="line"></span><br><span class="line">function B()&#123;&#125;</span><br><span class="line">B.prototype=a;</span><br><span class="line">b = new B();</span><br><span class="line"></span><br><span class="line">console.log(b.name);  //&#123;a: 1&#125;</span><br></pre></td></tr></table></figure></p>
+<p>当访问一个对象的属性时，先在这个对象自身属性中查找，如果没有，再沿着__proto__这条链向上找，这就原型链。<br>结合示例理解下:<br>&#8194;&#8194;我们让B的原型对象B.prototype等于另一个对象A的实例a,即 <strong>B.prototype = a</strong><br>&#8194;&#8194;又因为 B的实例b的__proto__等于B的原型对象，即 <strong>B.prototype = b.__proto__</strong><br>&#8194;&#8194;A同<strong>A.prototype = a.__proto__</strong></p>
+<p>访问b的属性name时，先在这个对象自身属性中查找，如果没有，再沿着b.__proto__找,b.__proto__如果没有，就找b.__proto__.__proto__,也就是B.prototype.__proto__,即a.__proto__,即A.prototype，到这一步找到name属性。</p>
+<p><img src="/images/blogUsed/yuanxinglain.jpg" alt="关系"></p>
+
       
     </div>
 
@@ -430,7 +462,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/angularJs-Vue/" rel="tag"># angularJs Vue</a>
+            <a href="/tags/原型-原型链-js/" rel="tag"># 原型 原型链 js</a>
           
         </div>
       
@@ -443,8 +475,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/09/triangle/" rel="next" title="CSS实现小三角">
-                <i class="fa fa-chevron-left"></i> CSS实现小三角
+              <a href="/2019/05/20/bibao/" rel="next" title="闭包">
+                <i class="fa fa-chevron-left"></i> 闭包
               </a>
             
           </div>
@@ -452,10 +484,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/15/hello-world/" rel="prev" title="mochadaban是什么">
-                mochadaban是什么 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -499,17 +527,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -599,23 +618,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#持续更新，后面可能会贴一些代码上来比较语法"><span class="nav-number">1.</span> <span class="nav-text">   持续更新，后面可能会贴一些代码上来比较语法</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       

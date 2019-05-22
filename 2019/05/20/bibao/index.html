@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部">
-<meta name="keywords" content="angularJs Vue">
+  <meta name="description" content="经常被问到闭包是什么，什么情况下用到闭包， 下面做一些小总结 一，什么是闭包&amp;#8194;&amp;#8194;简单来说，闭包就是能够读取其他函数内部变量的函数。 &amp;#8194;&amp;#8194;出于各种原因，我们有时候需要得到函数内的局部变量。但是在js中，正常情况下是办不到的，因为只有在函数内部才能读取局部变量，这就提供了一种新思路—–函数内部的函数也可以读取局部变量，将这个内部函数作为结果返回，调用返回">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初学Vue，比较angularJs和Vue">
-<meta property="og:url" content="http://yoursite.com/2019/05/10/compareAngularJsAndVue/index.html">
+<meta property="og:title" content="闭包">
+<meta property="og:url" content="http://yoursite.com/2019/05/20/bibao/index.html">
 <meta property="og:site_name" content="mochadaban">
-<meta property="og:description" content="刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部">
+<meta property="og:description" content="经常被问到闭包是什么，什么情况下用到闭包， 下面做一些小总结 一，什么是闭包&amp;#8194;&amp;#8194;简单来说，闭包就是能够读取其他函数内部变量的函数。 &amp;#8194;&amp;#8194;出于各种原因，我们有时候需要得到函数内的局部变量。但是在js中，正常情况下是办不到的，因为只有在函数内部才能读取局部变量，这就提供了一种新思路—–函数内部的函数也可以读取局部变量，将这个内部函数作为结果返回，调用返回">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-17T15:50:06.355Z">
+<meta property="og:updated_time" content="2019-05-22T08:31:09.009Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初学Vue，比较angularJs和Vue">
-<meta name="twitter:description" content="刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部">
+<meta name="twitter:title" content="闭包">
+<meta name="twitter:description" content="经常被问到闭包是什么，什么情况下用到闭包， 下面做一些小总结 一，什么是闭包&amp;#8194;&amp;#8194;简单来说，闭包就是能够读取其他函数内部变量的函数。 &amp;#8194;&amp;#8194;出于各种原因，我们有时候需要得到函数内的局部变量。但是在js中，正常情况下是办不到的，因为只有在函数内部才能读取局部变量，这就提供了一种新思路—–函数内部的函数也可以读取局部变量，将这个内部函数作为结果返回，调用返回">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/05/10/compareAngularJsAndVue/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/20/bibao/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>初学Vue，比较angularJs和Vue | mochadaban</title>
+  <title>闭包 | mochadaban</title>
   
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/10/compareAngularJsAndVue/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/20/bibao/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mochadaban">
@@ -345,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">初学Vue，比较angularJs和Vue
+          <h1 class="post-title" itemprop="name headline">闭包
 
               
             
@@ -371,12 +371,30 @@
                 
               
 
-              <time title="创建时间：2019-05-10 10:18:51" itemprop="dateCreated datePublished" datetime="2019-05-10T10:18:51+08:00">2019-05-10</time>
+              <time title="创建时间：2019-05-20 10:14:36" itemprop="dateCreated datePublished" datetime="2019-05-20T10:14:36+08:00">2019-05-20</time>
             
 
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -406,8 +424,19 @@
       
 
       
-        <p>刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。<br>   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部可以有自己的视图和数据逻辑。但在angularjs中感觉组件就是指令。vue不使用脏值检查，性能也更好一些。</p>
-<h2 id="持续更新，后面可能会贴一些代码上来比较语法"><a href="#持续更新，后面可能会贴一些代码上来比较语法" class="headerlink" title="   持续更新，后面可能会贴一些代码上来比较语法"></a>   持续更新，后面可能会贴一些代码上来比较语法</h2>
+        <p><strong>经常被问到闭包是什么，什么情况下用到闭包， 下面做一些小总结</strong></p>
+<p><strong>一，什么是闭包</strong><br>&#8194;&#8194;简单来说，闭包就是能够读取其他函数内部变量的函数。</p>
+<p>&#8194;&#8194;出于各种原因，我们有时候需要得到函数内的局部变量。但是在js中，正常情况下是办不到的，因为只有在函数内部才能读取局部变量，这就提供了一种新思路—–函数内部的函数也可以读取局部变量，将这个内部函数作为结果返回，调用返回的这个函数，就可以实现在函数外部间接读取/操作内部变量。</p>
+<p>&#8194;&#8194;这个定义在函数内部且被返回的函数，就是闭包。在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。</p>
+<p><strong>二，怎么实现闭包</strong></p>
+<p>&#8194;闭包的实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">　　function fn1()&#123;</span><br><span class="line">　　　　var num = 1;</span><br><span class="line">　　　　function fn2()&#123;</span><br><span class="line">　　　　　　alert(num); </span><br><span class="line">　　　　&#125;</span><br><span class="line">　　　　return fn2;</span><br><span class="line">　　&#125;</span><br><span class="line">　　var a=fn1();</span><br><span class="line">　　a(); // 1</span><br></pre></td></tr></table></figure></p>
+<p><strong>三，闭包有什么作用</strong></p>
+<p>&#8194;&#8194;闭包的作用，一个是前边提到的读取函数内部变量，另一个就是能让这个变量始终保持在内存中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function count() &#123;</span><br><span class="line">    var counter = 0;</span><br><span class="line">    return function ()          </span><br><span class="line">        &#123;return counter += 1;&#125;</span><br><span class="line">&#125;</span><br><span class="line">var add = count();</span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line">add();</span><br></pre></td></tr></table></figure></p>
+<p>&#8194;&#8194;这样写有两个好处，一是只能通过add来改变计数器的值，二是在count被调用后，变量counter没有被回收。</p>
+<p><strong>四，使用闭包需要注意</strong></p>
+<p>&#8194;&#8194;1）由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。</p>
+<p>&#8194;&#8194;2）闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</p>
+
       
     </div>
 
@@ -430,7 +459,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/angularJs-Vue/" rel="tag"># angularJs Vue</a>
+            <a href="/tags/js/" rel="tag"># js</a>
           
         </div>
       
@@ -443,8 +472,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/09/triangle/" rel="next" title="CSS实现小三角">
-                <i class="fa fa-chevron-left"></i> CSS实现小三角
+              <a href="/2019/05/17/clocks/" rel="next" title="之前做的 一个简单的clock">
+                <i class="fa fa-chevron-left"></i> 之前做的 一个简单的clock
               </a>
             
           </div>
@@ -453,8 +482,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/15/hello-world/" rel="prev" title="mochadaban是什么">
-                mochadaban是什么 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/20/prototypte/" rel="prev" title="原型和原型链">
+                原型和原型链 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -499,17 +528,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -599,23 +619,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#持续更新，后面可能会贴一些代码上来比较语法"><span class="nav-number">1.</span> <span class="nav-text">   持续更新，后面可能会贴一些代码上来比较语法</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
