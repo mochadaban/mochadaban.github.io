@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部">
-<meta name="keywords" content="angularJs Vue">
+  <meta name="description" content="整理js对象常用方法 一，Array对象    方法 描述     concat() 连接两个或更多的数组，并返回结果。   indexOf() 搜索数组中的元素，并返回它所在的位置。   lastIndexOf() 返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。   join() 把数组的所有元素放入一个字符串。   reverse() 反转数组的元素顺序。   p">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初学Vue，比较angularJs和Vue">
-<meta property="og:url" content="http://yoursite.com/2019/05/10/compareAngularJsAndVue/index.html">
+<meta property="og:title" content="js对象常用方法">
+<meta property="og:url" content="http://yoursite.com/2019/06/13/jsNormalFun/index.html">
 <meta property="og:site_name" content="mochadaban">
-<meta property="og:description" content="刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部">
+<meta property="og:description" content="整理js对象常用方法 一，Array对象    方法 描述     concat() 连接两个或更多的数组，并返回结果。   indexOf() 搜索数组中的元素，并返回它所在的位置。   lastIndexOf() 返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。   join() 把数组的所有元素放入一个字符串。   reverse() 反转数组的元素顺序。   p">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-17T15:50:06.355Z">
+<meta property="og:updated_time" content="2019-07-01T13:20:58.074Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初学Vue，比较angularJs和Vue">
-<meta name="twitter:description" content="刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部">
+<meta name="twitter:title" content="js对象常用方法">
+<meta name="twitter:description" content="整理js对象常用方法 一，Array对象    方法 描述     concat() 连接两个或更多的数组，并返回结果。   indexOf() 搜索数组中的元素，并返回它所在的位置。   lastIndexOf() 返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。   join() 把数组的所有元素放入一个字符串。   reverse() 反转数组的元素顺序。   p">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/05/10/compareAngularJsAndVue/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/13/jsNormalFun/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>初学Vue，比较angularJs和Vue | mochadaban</title>
+  <title>js对象常用方法 | mochadaban</title>
   
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/10/compareAngularJsAndVue/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/13/jsNormalFun/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="mochadaban">
@@ -345,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">初学Vue，比较angularJs和Vue
+          <h1 class="post-title" itemprop="name headline">js对象常用方法
 
               
             
@@ -371,12 +371,30 @@
                 
               
 
-              <time title="创建时间：2019-05-10 10:18:51" itemprop="dateCreated datePublished" datetime="2019-05-10T10:18:51+08:00">2019-05-10</time>
+              <time title="创建时间：2019-06-13 19:35:30" itemprop="dateCreated datePublished" datetime="2019-06-13T19:35:30+08:00">2019-06-13</time>
             
 
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -406,8 +424,264 @@
       
 
       
-        <p>刚接触vue，见识短浅。vue是我接触的第二种前端框架。第一个是angularjs，先在这里许个愿，希望后边有机会和时间去深入学习其他几种框架。<br>   开始vue的学习，先是在菜鸟教程上简单过了一遍语法和各种指令，第一感受是很灵活，容易上手。因为有angularjs经验，很多东西比如双向绑定，单向绑定就变得很容易理解。Vue中指令和组件划分很明确，指令只封装DOM操作，组件能表示一个独立的单元，内部可以有自己的视图和数据逻辑。但在angularjs中感觉组件就是指令。vue不使用脏值检查，性能也更好一些。</p>
-<h2 id="持续更新，后面可能会贴一些代码上来比较语法"><a href="#持续更新，后面可能会贴一些代码上来比较语法" class="headerlink" title="   持续更新，后面可能会贴一些代码上来比较语法"></a>   持续更新，后面可能会贴一些代码上来比较语法</h2>
+        <p><strong>整理js对象常用方法</strong></p>
+<p><strong>一，Array对象</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>concat()</td>
+<td style="text-align:center">连接两个或更多的数组，并返回结果。</td>
+</tr>
+<tr>
+<td>indexOf()</td>
+<td style="text-align:center">搜索数组中的元素，并返回它所在的位置。</td>
+</tr>
+<tr>
+<td>lastIndexOf()</td>
+<td style="text-align:center">返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。</td>
+</tr>
+<tr>
+<td>join()</td>
+<td style="text-align:center">把数组的所有元素放入一个字符串。</td>
+</tr>
+<tr>
+<td>reverse()</td>
+<td style="text-align:center">反转数组的元素顺序。</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td style="text-align:center">删除数组的最后一个元素并返回删除的元素。</td>
+</tr>
+<tr>
+<td>push()</td>
+<td style="text-align:center">向数组的末尾添加一个或更多元素，并返回新的长度。</td>
+</tr>
+<tr>
+<td>shift()</td>
+<td style="text-align:center">删除数组的第一个元素。</td>
+</tr>
+<tr>
+<td>unshift()</td>
+<td style="text-align:center">向数组的开头添加一个或更多元素，并返回新的长度。</td>
+</tr>
+<tr>
+<td>slice()</td>
+<td style="text-align:center">选取数组的的一部分，并返回一个新数组。</td>
+</tr>
+<tr>
+<td>splice()</td>
+<td style="text-align:center">从数组中添加或删除元素。</td>
+</tr>
+<tr>
+<td>toString()</td>
+<td style="text-align:center">把数组转换为字符串，并返回结果。</td>
+</tr>
+<tr>
+<td>map()</td>
+<td style="text-align:center">通过指定函数处理数组的每个元素，并返回处理后的数组。</td>
+</tr>
+<tr>
+<td>filter()</td>
+<td style="text-align:center">检测数组元素，并返回符合条件所有元素的数组。</td>
+</tr>
+<tr>
+<td>every()</td>
+<td style="text-align:center">检测数组元素的每个元素是否都符合条件。</td>
+</tr>
+<tr>
+<td>some()</td>
+<td style="text-align:center">检测数组元素中是否有元素符合指定条件。</td>
+</tr>
+<tr>
+<td>sort()</td>
+<td style="text-align:center">对数组的元素进行排序。</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td style="text-align:center">返回数组对象的原始值。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>二，String对象</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>charAt()</td>
+<td style="text-align:center">返回在指定位置的字符。</td>
+</tr>
+<tr>
+<td>charCodeAt()</td>
+<td style="text-align:center">返回在指定的位置的字符的 Unicode 编码。</td>
+</tr>
+<tr>
+<td>concat()</td>
+<td style="text-align:center">连接两个或更多字符串，并返回新的字符串。</td>
+</tr>
+<tr>
+<td>fromCharCode()</td>
+<td style="text-align:center">将 Unicode 编码转为字符。</td>
+</tr>
+<tr>
+<td>indexOf()</td>
+<td style="text-align:center">返回某个指定的字符串值在字符串中首次出现的位置。</td>
+</tr>
+<tr>
+<td>lastIndexOf()</td>
+<td style="text-align:center">从后向前搜索字符串。</td>
+</tr>
+<tr>
+<td>match()</td>
+<td style="text-align:center">查找找到一个或多个正则表达式的匹配。</td>
+</tr>
+<tr>
+<td>replace()</td>
+<td style="text-align:center">在字符串中查找匹配的子串， 并替换与正则表达式匹配的子串。</td>
+</tr>
+<tr>
+<td>search()</td>
+<td style="text-align:center">查找与正则表达式相匹配的值。</td>
+</tr>
+<tr>
+<td>slice()</td>
+<td style="text-align:center">提取字符串的片断，并在新的字符串中返回被提取的部分。</td>
+</tr>
+<tr>
+<td>split()</td>
+<td style="text-align:center">把字符串分割为字符串数组。</td>
+</tr>
+<tr>
+<td>substr()</td>
+<td style="text-align:center">从起始索引号提取字符串中指定数目的字符。</td>
+</tr>
+<tr>
+<td>substring()</td>
+<td style="text-align:center">提取字符串中两个指定的索引号之间的字符。</td>
+</tr>
+<tr>
+<td>toLowerCase()</td>
+<td style="text-align:center">把字符串转换为小写。</td>
+</tr>
+<tr>
+<td>toUpperCase()</td>
+<td style="text-align:center">把字符串转换为大写。</td>
+</tr>
+<tr>
+<td>trim()</td>
+<td style="text-align:center">去除字符串两边的空白</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td style="text-align:center">返回某个字符串对象的原始值。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>三，Number对象</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>toExponential(x)</td>
+<td style="text-align:center">把对象的值转换为指数计数法。（x为小数位数，可选）</td>
+</tr>
+<tr>
+<td>toFixed(x)</td>
+<td style="text-align:center">把数字转换为字符串，结果的小数点后有指定位数的数字。（x为小数位数，可选，默认0）</td>
+</tr>
+<tr>
+<td>toPrecision(x)</td>
+<td style="text-align:center">把数字格式化为指定的长度。</td>
+</tr>
+<tr>
+<td>toString()</td>
+<td style="text-align:center">把数字转换为字符串，使用指定的基数。</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td style="text-align:center">返回一个 Number 对象的基本数字值。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>四，全局函数</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>decodeURI()</td>
+<td style="text-align:center">解码某个编码的 URI。</td>
+</tr>
+<tr>
+<td>decodeURIComponent()</td>
+<td style="text-align:center">解码一个编码的 URI 组件。</td>
+</tr>
+<tr>
+<td>encodeURI()</td>
+<td style="text-align:center">把字符串编码为 URI。</td>
+</tr>
+<tr>
+<td>encodeURIComponent()</td>
+<td style="text-align:center">把字符串编码为 URI 组件。</td>
+</tr>
+<tr>
+<td>escape()</td>
+<td style="text-align:center">对字符串进行编码。</td>
+</tr>
+<tr>
+<td>eval()</td>
+<td style="text-align:center">计算 JavaScript 字符串，并把它作为脚本代码来执行。</td>
+</tr>
+<tr>
+<td>isFinite()</td>
+<td style="text-align:center">检查某个值是否为有穷大的数。</td>
+</tr>
+<tr>
+<td>isNaN()</td>
+<td style="text-align:center">检查某个值是否是数字。</td>
+</tr>
+<tr>
+<td>Number()</td>
+<td style="text-align:center">把对象的值转换为数字。</td>
+</tr>
+<tr>
+<td>parseFloat()</td>
+<td style="text-align:center">解析一个字符串并返回一个浮点数。</td>
+</tr>
+<tr>
+<td>parseInt()</td>
+<td style="text-align:center">解析一个字符串并返回一个整数。</td>
+</tr>
+<tr>
+<td>String()</td>
+<td style="text-align:center">把对象的值转换为字符串。</td>
+</tr>
+<tr>
+<td>unescape()</td>
+<td style="text-align:center">对由 escape() 编码的字符串进行解码。</td>
+</tr>
+</tbody>
+</table>
+
       
     </div>
 
@@ -430,7 +704,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/angularJs-Vue/" rel="tag"># angularJs Vue</a>
+            <a href="/tags/js/" rel="tag"># js</a>
           
         </div>
       
@@ -443,8 +717,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/09/triangle/" rel="next" title="CSS实现小三角">
-                <i class="fa fa-chevron-left"></i> CSS实现小三角
+              <a href="/2019/05/24/BFC/" rel="next" title="BFC">
+                <i class="fa fa-chevron-left"></i> BFC
               </a>
             
           </div>
@@ -452,10 +726,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/15/hello-world/" rel="prev" title="mochadaban是什么">
-                mochadaban是什么 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -499,17 +769,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -597,23 +858,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#持续更新，后面可能会贴一些代码上来比较语法"><span class="nav-number">1.</span> <span class="nav-text">   持续更新，后面可能会贴一些代码上来比较语法</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
